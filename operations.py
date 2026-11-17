@@ -66,7 +66,7 @@ def return_land(lands, returned_lands):
             
             back = actual_duration - duration
             cost_per_month = int(rented_lands[choice][3])
-            total_cost = cost_per_month * duration
+            total_cost = 0
 
             
             # Calculating fine for exceeding duration
@@ -148,7 +148,7 @@ def generate_bill(rented_lands, returned_lands):
         duration = land_info["duration"]
         rental_cost = land_info["rental_cost"]
         fine = land_info["fine"]
-        returned_cost = rental_cost + fine
+        returned_cost = fine
         total_cost += returned_cost
         print(f"|{kitta}\t{land_info['city']}\t{land_info['price']}\tReturn\t{duration} months\t| {returned_cost}\t|")
         print("|-------------------------------------------------------|---------------|")
